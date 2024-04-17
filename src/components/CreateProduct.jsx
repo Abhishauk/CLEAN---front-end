@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { addproduct } from '../Api/productApi';
 
 const CreateProduct = () => {
     const [productname, setProductName] = useState("");
@@ -8,7 +9,15 @@ const CreateProduct = () => {
 
     const createProduct = async () => {
         try {
+            // Create an object containing the product data
+            const productData = {
+                productname,
+                productprice,
+                productquantity,
+            };
             
+            // Pass the product data object to the Createproduct function
+            await addproduct(productData);
         } catch (error) {
             console.error("Error creating product:", error);
         }
