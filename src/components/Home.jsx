@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import CreateProduct from './CreateProduct'
 
 const Home = () => {
   return (
-    <div>
+    <div className='container'>
+      <div>
+        < CreateProduct />
+
+
+      </div>
        
       
     </div>
