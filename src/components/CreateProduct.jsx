@@ -8,20 +8,25 @@ const CreateProduct = () => {
     const [productquantity, setProductQuantity] = useState("");
 
     const createProduct = async () => {
-        try {
-            // Create an object containing the product data
+        try {   
             const productData = {
                 productname,
                 productprice,
                 productquantity,
             };
             
-            // Pass the product data object to the Createproduct function
             await addproduct(productData);
+            console.log("Product added successfully!");
+            setProductName("")
+            setProductPrice("")
+            setProductQuantity("")
+
         } catch (error) {
             console.error("Error creating product:", error);
         }
     }
+
+
 
     return (
         <div className="create-product-container">

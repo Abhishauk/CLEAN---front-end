@@ -1,32 +1,68 @@
 .create-product-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .create-product-container form {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .create-product-container form input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .create-product-container form input[type='submit'] {
-    background-color: green;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .create-product-container form input[type='submit']:hover {
-    background-color: green;
-  }
-  
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+}
+
+.create-product-container span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.create-product-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-product-container input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-product-container button {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-product-container button:hover {
+  background-color: green;
+}
+
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style for table header */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style for table cells */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Style for alternate table row */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

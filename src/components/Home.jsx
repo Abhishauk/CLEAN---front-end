@@ -1,11 +1,11 @@
 import React from 'react';
-import CreateProduct from './CreateProduct'
+import Products from './Products';
 
 const Home = () => {
   return (
     <div className='container'>
       <div>
-        < CreateProduct />
+        < Products />
 
 
       </div>
