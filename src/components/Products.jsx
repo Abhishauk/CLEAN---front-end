@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getDatas } from '../Api/productApi';
+import { getDatas ,DeleteData ,Editdata } from '../Api/productApi';
 import './style.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -9,9 +9,9 @@ const Products = () => {
 
     useEffect(() => {
        
-        GetDatas();
+        GetData();
     }, []);
-    const GetDatas = async () => {
+    const GetData = async () => {
         try {
             const data = await getDatas();
             console.log("Eeeee",data);
@@ -25,7 +25,26 @@ const Products = () => {
     const handlecreate = () => {
         navigate('CreateProduct');
     }
-   
+    const handledelete =async (id) => {
+       
+        try {
+            await DeleteData(id);
+            GetData()
+            
+        } catch (error) {
+            
+        }
+
+    }
+    const handleedit = async (id) => {
+        try {
+            navigate('EditProduct')
+            
+            
+        } catch (error) {
+            
+        }
+    }
 
     return (
         <div>
@@ -47,8 +66,8 @@ const Products = () => {
                             <td>{product.productprice}</td>
                             <td>{product.productquantity}</td>
 
-                            <td><button>Delete</button></td>
-                            <td><button>Edit</button></td>
+                            <td><button onClick={()=> handledelete(product._id)}>Delete</button></td>
+                            <td><button onClick={() => handleedit(product._id)}>Edit</button></td>
                         </tr>
                     ))}
                 </tbody>
